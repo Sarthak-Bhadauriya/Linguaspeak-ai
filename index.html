@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Translator + Speech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="hero" aria-label="English to Multi-language translator">
+            <header class="hero__header">
+                <h1>English to Multi-Language</h1>
+                <p>Type in English, translate instantly, then listen in your selected language.</p>
+            </header>
+
+            <div class="panel">
+                <div class="panel__head">
+                    <label for="inputText" class="field-label">English Input</label>
+                    <span id="inputCount" class="counter">0 chars</span>
+                </div>
+                <textarea id="inputText" placeholder="Example: How are you today?"></textarea>
+            </div>
+
+            <div class="controls">
+                <label for="languageSelect" class="field-label">Target Language</label>
+                <div class="controls__row">
+                    <select id="languageSelect" aria-label="Select output language"></select>
+                    <button id="translateBtn" type="button">Translate</button>
+                    <button id="clearBtn" type="button" class="ghost">Clear</button>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel__head">
+                    <label for="outputText" class="field-label">Translated Output</label>
+                    <span id="outputCount" class="counter">0 chars</span>
+                </div>
+                <textarea id="outputText" placeholder="Translation appears here..." readonly></textarea>
+            </div>
+
+            <div class="actions">
+                <button id="listenBtn" type="button" class="full">Listen</button>
+                <button id="copyBtn" type="button" class="ghost full">Copy</button>
+            </div>
+
+            <p id="statusText" class="status status--info">Ready.</p>
+            <p class="hint">Tip: Press Ctrl+Enter to translate quickly.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
